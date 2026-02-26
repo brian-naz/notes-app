@@ -1,0 +1,400 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root {
+  --bg: #f2f2f7;
+  --card: #ffffff;
+  --row-bg: #ffffff;
+  --text: #000;
+  --secondary: #8e8e93;
+  --divider: #e5e5ea;
+}
+
+[data-theme="dark"] {
+  --bg: #000;
+  --card: #1c1c1e;
+  --row-bg: #1c1c1e;
+  --text: #fff;
+  --secondary: #8e8e93;
+  --divider: #2c2c2e;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .glass {
+  background: rgba(28, 28, 30, 0.6);
+}
+
+.ios-app {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  position: relative;
+}
+
+.bottom-search {
+  flex: 1;
+  height: 40px;
+  border-radius: 14px;
+  border: none;
+  padding: 0 14px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  outline: none;
+}
+
+.page {
+  height: 100%;
+  overflow-y: auto;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 14px;
+  padding: 10px 16px;
+  transition: all 0.15s ease;
+}
+
+.header-bar {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 12px 16px;
+  z-index: 10;
+}
+
+.screen {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.screen-header {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.header-top {
+  height: 36px; /* same as circle button */
+  display: flex;
+  align-items: center;
+}
+
+.circle-placeholder {
+  width: 36px;
+  height: 36px;
+}
+
+.screen-title {
+  font-size: 34px;
+  font-weight: 800;
+  margin-top: 12px;
+}
+
+.screen-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 20px 120px 20px;
+}
+
+.card-row {
+  background: var(--row-bg);
+  padding: 16px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notes-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 16px 120px 16px;
+}
+
+.notes-bottom {
+  position: fixed;
+  bottom: 20px;
+  left: 16px;
+  right: 16px;
+  height: 64px;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 12px;
+}
+
+.note-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.note-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.note-title {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.note-body {
+  font-size: 14px;
+  opacity: 0.6;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.note-right {
+  font-size: 13px;
+  opacity: 0.5;
+  margin-left: 16px;
+}
+
+.note-date {
+  font-size: 13px;
+  color: var(--secondary);
+}
+
+.note-row {
+  background: var(--row-bg);
+  padding: 16px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.note-detail {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.note-section {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 12px 4px;
+  letter-spacing: 0.5px;
+}
+
+.detail-textarea {
+  width: 100%;
+  height: 70vh;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 16px;
+  outline: none;
+}
+
+.detail-date {
+  font-size: 12px;
+  letter-spacing: 0.2px;
+  opacity: 0.6;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.circle-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  transition: all 0.15s ease;
+}
+
+.circle-btn:active {
+  transform: scale(0.92);
+}
+
+.swipe-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  background: var(--row-bg);
+}
+
+.delete-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  background: #ff3b30;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(120px);
+  transition: transform 0.2s ease;
+}
+
+.folder-page {
+  height: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.folder-list {
+  margin-top: 16px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.folder-row {
+  background: var(--row-bg);
+  padding: 16px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.folder-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.folder-icon {
+  font-size: 20px;
+}
+
+.folder-name {
+  font-weight: 500;
+}
+
+.folder-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.6;
+}
+
+.folder-count {
+  font-size: 14px;
+}
+
+.new-folder-screen {
+  position: absolute;
+  inset: 0;
+  background: var(--bg);
+  padding: 20px;
+}
+
+.chevron {
+  font-size: 18px;
+}
+
+.new-folder-container {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.add-folder-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: #007aff;
+  color: white;
+  cursor: pointer;
+}
+
+.editor-wrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 20px;
+}
+
+.editor-content {
+  min-height: 100%;
+  outline: none;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.editor-toolbar-wrapper {
+  position: fixed;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.editor-toolbar {
+  display: flex;
+  gap: 18px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  backdrop-filter: blur(20px);
+  pointer-events: auto;
+}
+
+.toolbar-btn {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: background 0.15s ease;
+
+  font-weight: 600;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: all 0.15s ease;
+}
+
+.toolbar-btn:active {
+  opacity: 1;
+  transform: scale(0.9);
+}
