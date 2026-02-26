@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-const Folders = ({ folders, setActiveFolderId, createFolder }) => {
-  const [showNewFolder, setShowNewFolder] = useState(false);
+const Folders = ({ folders, setActiveFolderId }) => {
 
   return (
     <div className="screen">
@@ -20,7 +19,6 @@ const Folders = ({ folders, setActiveFolderId, createFolder }) => {
             className="card-row"
             onClick={() => setActiveFolderId(folder.id)}
           >
-            {showNewFolder}
             <div className="folder-left">
               <span className="folder-icon">📁</span>
               <span className="folder-name">{folder.name}</span>

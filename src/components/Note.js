@@ -22,10 +22,8 @@ const Note = ({ note, setActiveNoteId, editNote }) => {
   useEffect(() => {
     if (!editor || !note) return;
 
-    if (editor.getHTML() !== note.text) {
-      editor.commands.setContent(note.text || "", false);
-    }
-  }, [note?.id]);
+    editor.commands.setContent(note.text || "", false);
+  }, [editor, note?.id]);
 
   if (!note) return null;
 
@@ -42,7 +40,7 @@ const Note = ({ note, setActiveNoteId, editNote }) => {
           <button
             className="circle-btn glass"
             onClick={(e) => {
-              e.stopPropagation(); 
+              e.stopPropagation();
               setActiveNoteId(null);
             }}
           >
