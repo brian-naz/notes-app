@@ -19,13 +19,14 @@ const Note = ({ note, setActiveNoteId, editNote }) => {
     },
   });
 
+  const noteId = note?.id;
+  const noteText = note?.text;
+
   useEffect(() => {
-    if (!editor || !note) return;
+    if (!editor || !noteId) return;
 
-    editor.commands.setContent(note.text || "", false);
-  }, [editor, note?.id]);
-
-  if (!note) return null;
+    editor.commands.setContent(noteText || "", false);
+  }, [editor, noteId]);
 
   const handleFocusEditor = (e) => {
     if (editor && !editor.isFocused) {
