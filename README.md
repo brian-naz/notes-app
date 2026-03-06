@@ -4,7 +4,7 @@ An iOS Notes App I made in react :)
 
 ### Changelog:
 
-(Feb 26 2026)
+(Mar 6 2026)
 
 v1.0.0
 
@@ -17,7 +17,7 @@ v1.0.0
 
 ### Demo:
 To get started:
-<a href="https://brianos.vercel.app/">Notes</link>
+<a href="https://notes-app-azure-nine.vercel.app/">Notes</link>
 
 ### Setup:
 
