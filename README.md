@@ -10,6 +10,12 @@ v1.0.0
 
 - Initial Release
 
+(Mar 7 2026)
+
+v1.0.1
+
+- Minor UI Fixes for Light Mode
+
 ### Bugs:
 
 - The editor toolbar does not highlight the current style
