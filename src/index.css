@@ -27,7 +27,7 @@ body,
 .glass {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -45,10 +45,9 @@ body,
 .bottom-search {
   flex: 1;
   height: 40px;
-  border-radius: 14px;
-  border: none;
   padding: 0 14px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-glass-strong);
+  border: 1px solid var(--border-glass);
   color: var(--text);
   outline: none;
 }
@@ -68,7 +67,7 @@ button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   border-radius: 14px;
   padding: 10px 16px;
@@ -78,7 +77,7 @@ button {
 .header-bar {
   position: sticky;
   top: 0;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(24px);
   background: rgba(0, 0, 0, 0.4);
   padding: 12px 16px;
   z-index: 10;
@@ -98,7 +97,7 @@ button {
 }
 
 .header-top {
-  height: 36px; /* same as circle button */
+  height: 36px;
   display: flex;
   align-items: center;
 }
@@ -236,8 +235,10 @@ button {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  backdrop-filter: blur(20px);
-  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  background: var(--bg-glass-strong);
+  border: 1px solid rgba(69, 69, 69, 0.6);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
 
   display: flex;
   align-items: center;
@@ -376,7 +377,7 @@ button {
   gap: 18px;
   padding: 10px 24px;
   border-radius: 999px;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(24px);
   pointer-events: auto;
 }
 
