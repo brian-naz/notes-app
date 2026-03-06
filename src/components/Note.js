@@ -19,9 +19,6 @@ const Note = ({ note, setActiveNoteId, editNote }) => {
     },
   });
 
-  const noteId = note?.id;
-  const noteText = note?.text;
-
   useEffect(() => {
     if (!editor || !note) return;
 
